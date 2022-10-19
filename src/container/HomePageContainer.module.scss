@@ -1,0 +1,11 @@
+@use "../assets/util/breakpoints.scss" as *;
+
+.homePageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  @include respond-to("tablet") {
+    height: 98vh;
+    flex-direction: row;
+  }
+}

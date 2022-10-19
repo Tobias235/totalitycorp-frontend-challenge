@@ -1,0 +1,21 @@
+.buttons {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+
+  .googleButton {
+    font-weight: normal;
+  }
+
+  .signUpMailPhone {
+    color: white;
+    background-color: #1d9bf0;
+    margin-bottom: 5px;
+  }
+
+  .hover {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

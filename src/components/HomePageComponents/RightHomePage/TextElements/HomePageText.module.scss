@@ -1,18 +1,43 @@
+@use "../../../../assets/util/breakpoints.scss" as *;
+
 .homePageText {
-  color: rgb(231, 233, 234);
-  font-family: Helvetica, sans-serif, Arial;
-  word-break: break-all;
+  width: 100%;
+  font-family: Verdana, Helvetica, sans-serif, Arial;
+  word-wrap: break-word;
+  @include respond-to("tablet") {
+    width: 315px;
+    margin: auto;
+  }
+  @include respond-to("laptop") {
+    width: 100%;
+  }
 
   h1 {
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 800;
     letter-spacing: -1.2px;
-    margin: 35px 0;
+    margin: 40px 0;
+    @include respond-to("laptop") {
+      font-size: 64px;
+      margin: 35px 0;
+    }
   }
 
   h3 {
-    font-size: 31px;
+    font-size: 26px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    @include respond-to("laptop") {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
   }
+}
+
+.darkMode {
+  color: rgb(231, 233, 234);
+}
+
+.lightMode {
+  color: rgb(15, 20, 25);
 }

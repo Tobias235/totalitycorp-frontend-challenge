@@ -4,8 +4,9 @@
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  @include respond-to("tablet") {
+  @include respond-to("laptop") {
     height: 98vh;
     flex-direction: row;
+    padding-bottom: 20px;
   }
 }

@@ -4,17 +4,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  @include respond-to("tablet") {
+  width: 315px;
+  margin: auto;
+  @include respond-to("laptop") {
+    min-width: 580px;
     width: 80%;
-    min-width: 530px;
-    margin-left: 35px;
+    margin-left: 25px;
+    align-items: flex-start;
   }
 
-  .twitterLogo {
-    width: 43px;
-    height: 43px;
-    margin: 35px 25px 15px 0;
-    opacity: 0.85;
+  .logoContainer {
+    width: 315px;
+    margin: auto;
+    @include respond-to("tablet") {
+      margin: 0;
+    }
+    .twitterLogo {
+      width: 43px;
+      height: 43px;
+      margin: 35px 0 0 0;
+      opacity: 0.85;
+      align-self: flex-start;
+      @include respond-to("laptop") {
+        margin: 35px 25px 15px 0;
+      }
+    }
   }
 }

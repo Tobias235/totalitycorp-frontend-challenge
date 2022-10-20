@@ -1,10 +1,11 @@
+@use "../../../assets/util/breakpoints.scss" as *;
+
 .reUseableButton {
   border: none;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 9999px;
-  min-width: 266px;
-  max-width: 322px;
-  height: 38px;
+  width: 320px;
+  height: 36px;
   padding: 0 16px;
   text-align: center;
   margin: 10px 0 5px 0;
@@ -12,11 +13,19 @@
   font-family: arial;
   font-weight: 700;
   cursor: pointer;
+  @include respond-to("laptop") {
+    min-width: 266px;
+    max-width: 322px;
+    height: 38px;
+  }
 
   .buttonLogo {
     width: 20px;
     height: 20px;
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 5px;
+    @include respond-to("laptop") {
+      margin-right: 15px;
+    }
   }
 }

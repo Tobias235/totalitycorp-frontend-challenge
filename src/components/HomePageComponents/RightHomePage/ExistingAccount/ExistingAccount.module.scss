@@ -1,12 +1,20 @@
+@use "../../../../assets/util/breakpoints.scss" as *;
+
 .existingAccount {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  padding-bottom: 40px;
+  @include respond-to("laptop") {
+    padding-bottom: 0;
+  }
   h4 {
-    color: rgb(231, 233, 234);
     font-size: 17px;
-    font-family: Helvetica, sans-serif, Arial;
-    margin: 45px 0 10px 0;
+    font-family: Verdana, Helvetica, sans-serif, Arial;
+    margin: 30px 0 0 0;
+    @include respond-to("laptop") {
+      margin: 45px 0 10px 0;
+    }
   }
   .signInButton {
     min-width: 266px;
@@ -20,4 +28,12 @@
       background-color: rgb(29, 155, 230, 0.1);
     }
   }
+}
+
+.darkMode {
+  color: rgb(231, 233, 234);
+}
+
+.lightMode {
+  color: rgb(15, 20, 25);
 }

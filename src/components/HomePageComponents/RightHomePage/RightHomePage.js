@@ -1,22 +1,23 @@
 import Buttons from "./Buttons/Buttons";
-import styles from "./RightHomePage.module.scss";
-import twitterLogo from "../../../assets/image/twitterLogo.svg";
+import twitterLogoDark from "../../../assets/image/twitterLogoDark.svg";
+import twitterLogoLight from "../../../assets/image/twitterLogoLight.svg";
 import HomePageText from "./TextElements/HomePageText";
 import ConditionText from "./ConditionText/ConditionText";
 import ExistingAccount from "./ExistingAccount/ExisitingAccount";
 
-const RightHomePage = () => {
+import styles from "./RightHomePage.module.scss";
+
+const RightHomePage = ({ mode }) => {
+  const darkMode = mode === "dark" ? twitterLogoDark : twitterLogoLight;
   return (
     <div className={styles.rightHomePage}>
-      <img
-        src={twitterLogo}
-        alt="Twitter Logo"
-        className={styles.twitterLogo}
-      />
-      <HomePageText />
-      <Buttons />
+      <div className={styles.logoContainer}>
+        <img src={darkMode} alt="Twitter Logo" className={styles.twitterLogo} />
+      </div>
+      <HomePageText mode={mode} />
+      <Buttons mode={mode} />
       <ConditionText />
-      <ExistingAccount />
+      <ExistingAccount mode={mode} />
     </div>
   );
 };

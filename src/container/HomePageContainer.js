@@ -3,11 +3,11 @@ import RightHomePage from "../components/HomePageComponents/RightHomePage/RightH
 
 import styles from "./HomePageContainer.module.scss";
 
-const HomePageContainer = () => {
+const HomePageContainer = ({ mode }) => {
   return (
     <div className={styles.homePageContainer}>
       <LeftHomePage />
-      <RightHomePage />
+      <RightHomePage mode={mode} />
     </div>
   );
 };

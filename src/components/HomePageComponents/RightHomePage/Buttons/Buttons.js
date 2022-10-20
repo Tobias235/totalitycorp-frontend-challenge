@@ -5,9 +5,10 @@ import appleLogo from "../../../../assets/image/appleLogo.svg";
 import styles from "./Buttons.module.scss";
 import ButtonsTextBorder from "./ButtonsTextBorder.js/ButtonsTextBorder";
 
-const Buttons = () => {
+const Buttons = ({ mode }) => {
+  const darkMode = mode === "light" ? styles.lightMode : null;
   return (
-    <div className={styles.buttons}>
+    <div className={`${styles.buttons} ${darkMode}`}>
       <Button
         text="Sign up with Google"
         img={googleLogo}
@@ -20,7 +21,7 @@ const Buttons = () => {
         alt="Apple Logo"
         className={styles.hover}
       />
-      <ButtonsTextBorder />
+      <ButtonsTextBorder mode={mode} />
       <Button
         text="Sign up with phone or email"
         className={`${styles.signUpMailPhone} ${styles.hover}`}

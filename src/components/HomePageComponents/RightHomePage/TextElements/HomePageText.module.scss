@@ -2,7 +2,6 @@
 
 .homePageText {
   width: 100%;
-  font-family: Verdana, Helvetica, sans-serif, Arial;
   word-wrap: break-word;
   @include respond-to("tablet") {
     width: 315px;

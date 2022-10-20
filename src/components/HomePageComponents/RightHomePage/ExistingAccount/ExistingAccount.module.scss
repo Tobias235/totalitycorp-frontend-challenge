@@ -10,7 +10,6 @@
   }
   h4 {
     font-size: 17px;
-    font-family: Verdana, Helvetica, sans-serif, Arial;
     margin: 30px 0 0 0;
     @include respond-to("laptop") {
       margin: 45px 0 10px 0;

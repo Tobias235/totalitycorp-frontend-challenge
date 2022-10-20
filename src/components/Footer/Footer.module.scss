@@ -1,17 +1,25 @@
+@use "../../assets/util/breakpoints.scss" as *;
+
 .footer {
+  width: 90%;
+  margin: auto;
   padding: 20px 0;
   color: white;
   bottom: 0;
-  text-align: center;
   font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   color: rgb(113, 118, 123);
+  @include respond-to("laptop") {
+    text-align: center;
+    width: 95%;
+  }
 
   .linksContainer {
     margin-bottom: 10px;
+    text-align: center;
     .links {
       text-decoration: none;
-      padding-right: 16px;
+      padding-right: 12px;
       color: rgb(113, 118, 123);
 
       &:hover {

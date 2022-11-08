@@ -24,8 +24,7 @@
 
 ## Overview
 
-It was a fun project and a little challenging to get all features to work. I am happy with the end result and everything works.
-I've learnt to use geolocation and get the users coordinates and render the weather data of their current position. I continue to improve my coding for every project I do and try to keep my code and file less messy and crowded.
+I used react and preprocessor Sass/SCSS for styling with scss modules. I started by doing a basic layout of all components that would be on the page and added styling to each of them to get them to correct spot after I fixed the desktop size I started making it responsive. Added footer links to an array of objects to avoid making the files crowded with anchor tags. I used react hooks (useState and useEffect) to handle changes between dark and light mode. Also adds the state of dark/light mode to local storage.
 
 ### Built With
 
